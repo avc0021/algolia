@@ -1,0 +1,47 @@
+version: "1.3"
+# URL Substring Regex Javascript
+algoliaUrlRegex: 'https:\/\/latency-dsn.algolia(\w|\.|-)*\.(com|net|io).*'
+# Number of request to keep
+maxRequests: 40
+# Hide requests if they don't match filters
+showMatchingRequestsOnly: false
+
+# MultiQuery Display Configuration (default:first)
+multiQuery:
+  # How to render Multi-queries (first, last, all, criteria)
+  mode: all
+  # criteria At least one of the listed parameters needs to exist to include the query.
+  # If you want to make multiple params mandatory, prepend-them with $ (ex: [ $filters, $facetFilters ]).
+  # It requires mode:criteria.
+  criteria: []
+
+# Request Display Options
+requestDisplayOptions:
+  # alwaysShowParams (will appear even if undefined)
+  alwaysShowParams: []
+  # highlightParams (highlight keys if available)
+  highlightParams: [analyticsTags, ruleContexts]
+  # Hidden keys
+  hideParams: [highlightPostTag, highlightPreTag]
+  # Hide everything except te following properties (if present)
+  hideEverythingBut: []
+
+# Request Filters Options
+requestFilters:
+  # Only show requests with at least one of the following ruleContexts
+  ruleContexts: []
+  # Only show requests with at least one of the following tags
+  analyticsTags: []
+  #  OR jsonpath filters ex: ["$..[?(@.indexName == "my_index")]"]
+  jsonPathFilters: []
+
+# Response Filters Options
+responseFilters:
+  jsonPathFilters: []
+
+# Extracting data from response
+responseExtracts:
+  #  Object with jsonpath filters as values https://www.npmjs.com/package/jsonpath (ej myAttr:'*')
+  jsonPathExtracts: {}
+  # Remove repeated extracts
+  removeRepeatedExtracts: true

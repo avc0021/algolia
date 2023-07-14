@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Algolia Autocomplete default Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic" />
+  <!-- Algolia InstantSearch default Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css">
+  <!-- Your styles -->
+  <link rel="stylesheet" href="./css/main.css">
+  <title>InstantSearch + Autocomplete</title>
+</head>
+
+<body class="bg-slate-400 flex justify-center font-mono">
+  <div class="text-gray-700 bg-white max-w-screen-xl w-screen min-h-screen p-8">
+    <nav class="flex justify-start items-center mb-8 px-1 flex-wrap">
+      <div>
+        <a href="/"
+          class="text-blue-500 font-bold text-sm border border-gray-200 rounded-full py-2 px-4 ml-4  block">Global</a>
+      </div>
+      <div>
+        <a href="#l"
+          class="text-amber-500 font-bold text-sm ml-4 border border-gray-200 rounded-full py-2 px-4 ml-4 block">Search
+          Results Page</a>
+      </div>
+    </nav>
+    <h1 class="pb-3 font-bold">InstantSearch + Autocomplete</h1>
+    <!-- Autocomplte container ID-->
+    <div id="autocomplete__container" class="pb-2"></div>
+    <!-- InstantSearch containers!! -->
+    <div id="searchbox__container" class="pb-2"></div>
+    <div id="hits-default__container"></div>
+    <div id="hits-non-results__container"></div>
+    <div id="pagination" class="p-8 text-center"></div>
+  </div>
+
+  <!-- Algolia Scripts and other dependencies-->
+  <script src="https://unpkg.com/PubSub"></script>
+  <script>
+    var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@2.6.0";
+
+    !function (e, a, t, n, s, i, c) {
+      e.AlgoliaAnalyticsObject = s, e[s] = e[s] || function () {
+        (e[s].queue = e[s].queue || []).push(arguments)
+      }, e[s].version = (n.match(/@([^\/]+)\/?/) || [])[1], i = a.createElement(t), c = a.getElementsByTagName(t)[0],
+        i.async = 1, i.src = n, c.parentNode.insertBefore(i, c)
+    }(window, document, "script", ALGOLIA_INSIGHTS_SRC, "aa");
+  </script>
+  <!-- Autocomplete Libraries (autocomplete-js, plugins) -->
+  <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-recent-searches"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-algolia-insights"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-query-suggestions"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-plugin-redirect-url"></script>
+  <!-- Autocomplete implementation -->
+  <script src="js/autocomplete.js" type="module"></script>
+  <!-- InstantSearch dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.2/dist/algoliasearch-lite.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.53.0"></script>
+  <script src="js/instantSearch.js" type="module"></script>
+</body>
+
+</html>
