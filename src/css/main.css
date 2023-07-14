@@ -222,11 +222,12 @@ body {
   opacity: 1;
 }
 
-/* --- Content */
+/* --- Content july 14 */
 .aa-Source[data-autocomplete-source-id='generalInformation'] .aa-ItemContent {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  flex-direction: row;
+    height: 100%;
+    display: flex;
+    margin-left: 10px;
 }
 
 .aa-Source[data-autocomplete-source-id='generalInformation'] .aa-ItemContent mark {
