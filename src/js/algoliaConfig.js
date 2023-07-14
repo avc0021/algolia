@@ -28,7 +28,7 @@ export const searchConfig = preProcessConfig({
   recordsIndex: "main_search",
   noResultsIndex: "main_search",
   suggestionsIndex: "main_search_query_suggestions",
-  searchPagePath: "/_dev/search-results.html",
+  searchPagePath: "https://www.uiw.edu/_dev/search-results.html",
   autocompleteTags: {
     recordsSearch: ['autocomplete-search'],
     nonResults: ['autocomplete-non-results'],
