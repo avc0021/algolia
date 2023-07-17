@@ -76,6 +76,7 @@ function itemTemplate(hit, { html, components, sendEvent }) {
         ${components.Highlight({ attribute: 'name', hit })}
       </a>
       <p>${components.Highlight({ attribute: 'description', hit })}</p>
+      <p>${hit.site}</p>
     </article>`
 }
 
