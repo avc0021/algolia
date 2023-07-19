@@ -80,7 +80,7 @@ export function itemTemplate(itemTemplateParams) {
     attribute: 'description',
   })}
           </p>
-          <p>${item.site}</p>
+          <p class="info-site">${item.site}</p>
         </div>
       </div>
     </div>

@@ -377,6 +377,11 @@ body {
   font-size: .75em;
 }
 
+p.info-site {
+color: #aa1010;
+font-size: 0.75em;
+}
+
 .aa-Content .aa-ItemContentTitle,
 .general-info-title {
   color: rgb(170, 16, 16);
