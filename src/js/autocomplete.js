@@ -9,7 +9,7 @@ import { searchClient, insightsClient, searchConfig, pubsub } from "./algoliaCon
 // Helper functions
 import { getCollection, updateUrlParameter, QUERY_UPDATE_EVT } from "./common";
 
-// Events Plugin
+// Events Plugin - can use to forwad to GA or google anlaytics 
 const algoliaInsightsPlugin = createAlgoliaInsightsPlugin({ insightsClient });
 
 // Recent Search Plugin
